@@ -1,0 +1,90 @@
+[tool.poetry]
+name = "{{cookiecutter.project_slug}}"
+version = "0.1.0"
+description = "{{cookiecutter.project_name}}"
+authors = []
+packages = [
+    { include = "{{cookiecutter.project_slug}}" }
+]
+
+[tool.poetry.dependencies]
+python = ">={{cookiecutter.python_version}},<4.0"
+uvicorn = { extras = ["standard"], version = "^0.20" }
+kupala = { git = "https://github.com/alex-oleshkevich/kupala.git" }
+gunicorn = "^20.1.0"
+uvloop = "^0.17.0"
+starlette-babel = "*"
+starlette-flash = "^1.0"
+starsessions = "^2.0.0"
+starception = "^1.0"
+httpx = "^0.23.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2"
+pytest-sugar = "^0.9"
+pytest-asyncio = "^0.19"
+pytest-coverage = "^0.0"
+factory-boy = "^3.2.1"
+black = "^22.10.0"
+mypy = "^0.991"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+norecursedirs = [
+    "node_modules", "frontend", "storage", "dist", ".git",
+    "*/migrations/*", "*/static/*", "docs", ".venv"
+]
+addopts = "--tb=short -s --no-cov-on-fail"
+testpaths = ["tests"]
+
+[tool.black]
+line-length = 120
+include = '\.pyi?$'
+exclude = '''
+(
+    asv_bench/env
+  | \.egg
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.nox
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)
+'''
+
+[tool.mypy]
+disallow_untyped_defs = true
+ignore_missing_imports = true
+files = ["{{cookiecutter.project_slug}}"]
+exclude = "/*venv/"
+pretty = true
+show_error_context = true
+show_column_numbers = true
+show_error_codes = true
+plugins = ["pydantic.mypy"]
+
+[tool.isort]
+multi_line_output = 3
+profile = "black"
+line_length = 120
+
+[tool.coverage.report]
+show_missing = true
+exclude_lines = [
+    'if TYPE_CHECKING:',
+    'pragma: no cover',
+    "if __name__ == '__main__':",
+]
+
+[tool.refurb]
+ignore = []
+quiet = true

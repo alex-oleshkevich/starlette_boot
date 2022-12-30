@@ -1,0 +1,45 @@
+.DS_Store
+node_modules
+/dist
+
+# local env files
+.env
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.pyc
+__pycache__
+
+*.egg-info
+output.css
+
+wp.js
+.cache
+*.html.py
+var/media/*
+!var/media/.gitkeep
+.coverage
+.private
+
+/.waypoint/
+storage/
+!storage/.gitkeep
+_var
+*.mo
+*/statics/build/*
+docs/
+_private
+uploads
+celerybeat-schedule
+

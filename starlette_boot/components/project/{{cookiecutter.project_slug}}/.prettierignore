@@ -1,0 +1,14 @@
+.venv
+_private
+.mypy_cache
+__pycache__
+assets/node_modules
+migrations
+takinada
+tests
+uploads
+docker
+deploy
+alembic
+scripts
+terraform

@@ -1,0 +1,16 @@
+!.coveragerc
+!.env*
+!.pylintrc
+*.egg-info
+/dist
+/.venv
+.pytest_cache
+/.mypy_cache
+*.egg-info
+docs/
+storage/
+_var
+.env
+assets/node_modules
+{{cookiecutter.project_slug}}/statics/*
+uploads/

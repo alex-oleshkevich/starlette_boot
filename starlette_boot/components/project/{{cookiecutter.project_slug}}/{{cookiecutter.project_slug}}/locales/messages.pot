@@ -1,0 +1,378 @@
+# Translations template for PROJECT.
+# Copyright (C) 2022 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-11-26 17:18+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: takinada/views.py:23
+msgid "Terms and conditions"
+msgstr ""
+
+#: takinada/views.py:31
+msgid "Privacy policy"
+msgstr ""
+
+#: takinada/auth/commands.py:17
+msgid "Create user"
+msgstr ""
+
+#: takinada/auth/commands.py:19 takinada/auth/forms.py:8
+#: takinada/auth/forms.py:15 takinada/registration/forms.py:10
+msgid "Email"
+msgstr ""
+
+#: takinada/auth/commands.py:20 takinada/auth/forms.py:9
+#: takinada/auth/forms.py:23 takinada/registration/forms.py:12
+msgid "Password"
+msgstr ""
+
+#: takinada/auth/commands.py:26
+msgid "User created. ID = {user_id}."
+msgstr ""
+
+#: takinada/auth/commands.py:33
+msgid "Change password of {email}."
+msgstr ""
+
+#: takinada/auth/commands.py:37 takinada/auth/commands.py:53
+msgid "User does not exists."
+msgstr ""
+
+#: takinada/auth/commands.py:39
+msgid "Set new password for {user}"
+msgstr ""
+
+#: takinada/auth/commands.py:40
+msgid "Enter new password"
+msgstr ""
+
+#: takinada/auth/commands.py:43
+msgid "Password has been changed."
+msgstr ""
+
+#: takinada/auth/commands.py:55
+msgid "Test password of {user}"
+msgstr ""
+
+#: takinada/auth/commands.py:56
+msgid "Enter password"
+msgstr ""
+
+#: takinada/auth/commands.py:58
+msgid "Passwords did match."
+msgstr ""
+
+#: takinada/auth/commands.py:60 takinada/auth/forms.py:35
+msgid "Passwords did not match."
+msgstr ""
+
+#: takinada/auth/commands.py:71
+msgid "Enter plain password"
+msgstr ""
+
+#: takinada/auth/forms.py:10
+msgid "Remember me"
+msgstr ""
+
+#: takinada/auth/forms.py:31
+msgid "Confirm Password"
+msgstr ""
+
+#: takinada/auth/mails.py:11
+msgid "Your password reset link."
+msgstr ""
+
+#: takinada/auth/mails.py:21
+#: takinada/auth/templates/auth/mail_password_changed.html:2
+#: takinada/auth/views.py:124
+msgid "Your password has been changed."
+msgstr ""
+
+#: takinada/auth/validators.py:7
+msgid "Password must not be the same as email."
+msgstr ""
+
+#: takinada/auth/views.py:43
+msgid "Too many failed login attempts."
+msgstr ""
+
+#: takinada/auth/views.py:48
+msgid "Invalid email or password"
+msgstr ""
+
+#: takinada/auth/views.py:52
+msgid "Invalid email or password."
+msgstr ""
+
+#: takinada/auth/views.py:66
+msgid "Authenticated successfully."
+msgstr ""
+
+#: takinada/auth/views.py:77 takinada/templates/app.html:90
+msgid "Login"
+msgstr ""
+
+#: takinada/auth/views.py:87
+msgid "You have been signed out."
+msgstr ""
+
+#: takinada/auth/views.py:102
+msgid "Link is sent to your email."
+msgstr ""
+
+#: takinada/auth/templates/auth/change_password.html:1
+#: takinada/auth/templates/auth/change_password.html:2
+msgid "Set new password"
+msgstr ""
+
+#: takinada/auth/templates/auth/change_password.html:5
+#: takinada/users/templates/profile/index.html:28
+#: takinada/users/templates/profile/index.html:39
+msgid "Change password"
+msgstr ""
+
+#: takinada/auth/templates/auth/change_password.html:7
+#: takinada/auth/templates/auth/forgot_password.html:8
+msgid "Remembered your password?"
+msgstr ""
+
+#: takinada/auth/templates/auth/change_password.html:8
+#: takinada/auth/templates/auth/forgot_password.html:9
+msgid "Sign in instead"
+msgstr ""
+
+#: takinada/auth/templates/auth/forgot_password.html:1
+#: takinada/auth/templates/auth/forgot_password.html:6
+msgid "Reset password"
+msgstr ""
+
+#: takinada/auth/templates/auth/forgot_password.html:2
+msgid "Enter your email address and we will sent you password reset link."
+msgstr ""
+
+#: takinada/auth/templates/auth/invalid_token.html:1
+msgid "This link is no longer valid."
+msgstr ""
+
+#: takinada/auth/templates/auth/invalid_token.html:3
+#, python-format
+msgid "The link is active only for %(max_age_minutes)s minutes. "
+msgstr ""
+
+#: takinada/auth/templates/auth/login.html:1
+#: takinada/auth/templates/auth/login.html:13
+msgid "Sign in"
+msgstr ""
+
+#: takinada/auth/templates/auth/login.html:5
+msgid "Forgot password?"
+msgstr ""
+
+#: takinada/auth/templates/auth/login.html:15
+msgid "Don't have an account?"
+msgstr ""
+
+#: takinada/auth/templates/auth/login.html:16
+msgid "Sign up!"
+msgstr ""
+
+#: takinada/auth/templates/auth/mail_password_changed.html:4
+#, python-format
+msgid ""
+" Hi, %(user)s!<br />\n"
+"    We want to inform you that your password has been changed. "
+msgstr ""
+
+#: takinada/auth/templates/auth/mail_reset_password.html:2
+msgid "Password reset"
+msgstr ""
+
+#: takinada/auth/templates/auth/mail_reset_password.html:4
+#, python-format
+msgid ""
+" Hi %(user)s! <br />\n"
+"    A request has been received to change the password for your account. "
+msgstr ""
+
+#: takinada/auth/templates/auth/mail_reset_password.html:7
+msgid "Click here to reset your password"
+msgstr ""
+
+#: takinada/auth/templates/auth/mail_reset_password.html:9
+msgid ""
+"If you didn't request to reset your password, there's nothing to worry "
+"about - simply ignore this email."
+msgstr ""
+
+#: takinada/config/mail/commands.py:14
+msgid "This is test email"
+msgstr ""
+
+#: takinada/config/mail/commands.py:15
+msgid "If you see this then it works. Sent at {time}."
+msgstr ""
+
+#: takinada/registration/forms.py:19
+msgid "Accept usage terms and privacy policy"
+msgstr ""
+
+#: takinada/registration/forms.py:29
+msgid "This address is not available."
+msgstr ""
+
+#: takinada/registration/templates/registration/mail_confirm_email.html:2
+msgid "Confirm your email address"
+msgstr ""
+
+#: takinada/registration/templates/registration/mail_confirm_email.html:4
+#, python-format
+msgid ""
+" Hi %(name)s! <br />\n"
+"    to confirm your email address just click the button below and you are"
+" good to go! "
+msgstr ""
+
+#: takinada/registration/templates/registration/mail_confirm_email.html:7
+msgid "Confirm email"
+msgstr ""
+
+#: takinada/registration/templates/registration/register.html:1
+msgid "Sign up"
+msgstr ""
+
+#: takinada/registration/templates/registration/register.html:4
+#, python-format
+msgid ""
+" Agree the\n"
+"    <a href=\"%(terms_url)s\" tabindex=\"-1\">terms</a> and <a "
+"href=\"%(policy_url)s\">policy</a>. "
+msgstr ""
+
+#: takinada/registration/templates/registration/register.html:11
+msgid "Create account"
+msgstr ""
+
+#: takinada/registration/templates/registration/register.html:13
+msgid "Already have an account?"
+msgstr ""
+
+#: takinada/registration/templates/registration/register.html:14
+msgid "Sign in!"
+msgstr ""
+
+#: takinada/templates/app.html:9 takinada/templates/app.html:69
+msgid "Search"
+msgstr ""
+
+#: takinada/templates/app.html:16
+msgid "For Business"
+msgstr ""
+
+#: takinada/templates/app.html:39 takinada/templates/app.html:84
+msgid "Your profile"
+msgstr ""
+
+#: takinada/templates/app.html:40 takinada/templates/app.html:85
+msgid "Sign out"
+msgstr ""
+
+#: takinada/templates/app.html:45 takinada/templates/app.html:89
+msgid "Register"
+msgstr ""
+
+#: takinada/templates/app.html:46
+msgid "Log in"
+msgstr ""
+
+#: takinada/templates/lib/empty_state.html:1
+msgid "This page has no content."
+msgstr ""
+
+#: takinada/templates/lib/forms.html:111
+msgid "Add a new item"
+msgstr ""
+
+#: takinada/templates/lib/forms.html:133
+msgid "Drop or select files"
+msgstr ""
+
+#: takinada/templates/lib/forms.html:136
+msgid "You can select up to 5 files each 5mb max."
+msgstr ""
+
+#: takinada/templates/lib/forms.html:192
+msgid "Select"
+msgstr ""
+
+#: takinada/templates/lib/forms.html:200
+msgid "Delete"
+msgstr ""
+
+#: takinada/templates/lib/pagination.html:5
+#, python-format
+msgid "Showing %(start_index)s - %(end_index)s of %(total_rows)s results."
+msgstr ""
+
+#: takinada/templates/lib/pagination.html:12
+msgid "Previous"
+msgstr ""
+
+#: takinada/templates/lib/pagination.html:25
+msgid "Next"
+msgstr ""
+
+#: takinada/templates/mail/base_mail.html:24
+msgid ""
+"If the button doesn't work copy and paste this link into the\n"
+"                                                address bar:"
+msgstr ""
+
+#: takinada/users/forms.py:6
+msgid "First name"
+msgstr ""
+
+#: takinada/users/forms.py:7
+msgid "Last name"
+msgstr ""
+
+#: takinada/users/views.py:31
+msgid "Profile has been updated."
+msgstr ""
+
+#: takinada/users/views.py:40
+msgid "Password has been updated."
+msgstr ""
+
+#: takinada/users/views.py:43
+msgid "Invalid current password."
+msgstr ""
+
+#: takinada/users/templates/profile/index.html:1
+msgid "Your Profile"
+msgstr ""
+
+#: takinada/users/templates/profile/index.html:6
+msgid "Your information"
+msgstr ""
+
+#: takinada/users/templates/profile/index.html:19
+msgid "Update my information"
+msgstr ""
+
+#: takinada/users/templates/profile/index.html:48
+#: takinada/users/templates/profile/index.html:50
+msgid "Logout"
+msgstr ""

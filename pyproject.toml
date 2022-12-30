@@ -1,0 +1,118 @@
+[tool.poetry]
+name = "starlette_boot"
+description = "Starlette project generator."
+version = "0.1.0"
+authors = ["Alex Oleshkevich <alex.oleshkevich@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/alex-oleshkevich/starlette_boot"
+repository = "https://github.com/alex-oleshkevich/starlette_boot"
+documentation = "https://github.com/alex-oleshkevich/starlette_boot"
+keywords = []
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10.0"
+cookiecutter = "^2.1.1"
+click = "^8.1.3"
+questionary = "^1.10.0"
+slugify = "^0.0.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2"
+pytest-asyncio = "^0.20"
+pytest-cov = "^4"
+black = "^22.10"
+mypy = "^0.990"
+flake8 = "^5.0"
+types-python-slugify = "^7.0.0.1"
+
+[tool.poetry.scripts]
+starlette_boot = 'starlette_boot.main:app'
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+target-version = ["py310"]
+line_length = 120
+extend-exclude = true
+exclude = '''
+(
+    asv_bench/env
+  | \.egg
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.nox
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | setup.py
+)
+'''
+
+
+[tool.isort]
+combine_as_imports = true
+include_trailing_comma = true
+known_standard_library = "dataclasses,typing_extensions"
+known_first_party = "starlette_boot"
+known_third_party = ["pkg_resources", "toml"]
+known_future_library = "__future__"
+line_length = 120
+multi_line_output = 3
+profile = "black"
+use_parentheses = true
+
+[tool.coverage.run]
+branch = true
+source = ["starlette_boot"]
+omit = ["tests/*", ".venv/*", ".git/*", "*/__main__.py"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "raise NotImplementedError"
+]
+
+[tool.mypy]
+disallow_untyped_defs = true
+ignore_missing_imports = true
+files = ["starlette_boot", "examples", "tests"]
+pretty = true
+strict = true
+show_error_context = true
+show_column_numbers = true
+show_error_codes = true
+
+[tool.pytest.ini_options]
+minversion = "7.2"
+python_files = ["tests.py", "test_*.py", "*_tests.py"]
+norecursedirs = [
+    "node_modules", "frontend", "storage", "dist", ".git",
+    "*/migrations/*", "*/static/*", "docs", ".venv"
+]
+addopts = "--tb=short -s --no-cov-on-fail"
+testpaths = ["tests"]
+filterwarnings = [
+    "ignore::UserWarning",
+    "ignore::DeprecationWarning",
+]
