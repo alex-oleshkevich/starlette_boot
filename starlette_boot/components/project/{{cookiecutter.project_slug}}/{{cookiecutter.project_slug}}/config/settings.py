@@ -38,6 +38,9 @@ class AppSettings:
 @dataclasses.dataclass
 class ReleaseSettings:
     release_id: str = env("RELEASE_ID", default="")
+    branch: str = env("CI_COMMIT_REF_SLUG", default="")
+    commit: str = env("CI_COMMIT_SHA", default="")
+    build_date: str = env("CI_BUILD_DATE", default="")
 
 
 @dataclasses.dataclass
@@ -48,6 +51,12 @@ class SecuritySettings:
 @dataclasses.dataclass
 class SessionSettings:
     lifetime: int = 3600 * 24
+
+
+@dataclasses.dataclass
+class SentrySettings:
+    dsn: str = secret("sentry_url.secret", "")
+    traces_sample_rate: float = 0.1
 
 
 @dataclasses.dataclass

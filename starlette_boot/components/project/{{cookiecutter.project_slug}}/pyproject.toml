@@ -18,6 +18,7 @@ starlette-flash = "^1.0"
 starsessions = "^2.0.0"
 starception = "^1.0"
 httpx = "^0.23.0"
+sentry-sdk = "^1.12"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.2"
