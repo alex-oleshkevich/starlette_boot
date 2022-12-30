@@ -24,7 +24,7 @@ def new(directory: str) -> None:
         ),
     ).ask()
 
-    template_dir = pathlib.Path(__file__).parent / "templates" / "project"
+    template_dir = pathlib.Path(__file__).parent / "components" / "project"
 
     generate_files(
         repo_dir=template_dir,
